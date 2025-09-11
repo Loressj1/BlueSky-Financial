@@ -1,0 +1,37 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Auth.master.cs" Inherits="bluesky.Auth" %>
+<!DOCTYPE html>
+<html lang="es">
+<head runat="server">
+  <meta charset="utf-8" />
+  <title>BlueSky - Autenticación</title>
+
+  <!-- Usa los mismos CSS que ya usas en tu proyecto -->
+  <link href="<%: ResolveUrl("~/css/bootstrap.min.css") %>" rel="stylesheet" />
+  <link href="<%: ResolveUrl("~/css/font-awesome.min.css") %>" rel="stylesheet" />
+  <link href="<%: ResolveUrl("~/css/templatemo-style.css") %>" rel="stylesheet" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+  <style>
+    /* Fondo clarito y centro el contenido */
+    body{ background:#f7f7fb; }
+    .auth-shell{
+      min-height:100vh;
+      display:flex; align-items:center; justify-content:center;
+      padding:40px 15px;
+    }
+  </style>
+</head>
+<body>
+  <!-- IMPORTANTE: el form de WebForms -->
+  <form id="form1" runat="server">
+    <!-- Aquí se mostrará el contenido de las páginas que usen este master -->
+    <div class="auth-shell">
+      <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+    </div>
+  </form>
+
+  <!-- (Opcional) JS básicos si los necesitas -->
+  <script src="<%: ResolveUrl("~/js/jquery.min.js") %>"></script>
+  <script src="<%: ResolveUrl("~/js/bootstrap.min.js") %>"></script>
+</body>
+</html>
